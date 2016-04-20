@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7C05147D-E595-4763-BE78-FA3F43F66626}</ProjectGuid>
+    <ProjectGuid>{95B15967-6B9C-4BA1-9C63-251217A49AF0}</ProjectGuid>
     <RootNamespace>A10_BoundingObjectManager</RootNamespace>
     <ProjectName>A10_BoundingObjectManager</ProjectName>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
