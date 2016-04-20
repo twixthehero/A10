@@ -1,7 +1,7 @@
 #pragma once
 #include "RE\ReEngAppClass.h"
 #include <SFML\Graphics.hpp>
-#include "MyBoundingCubeClass.h"
+#include "MyBoundingObjectClass.h"
 #include <cstring>
 
 class BoundingObjectManager : public ReEngAppClass
@@ -11,9 +11,13 @@ public:
 	static BoundingObjectManager* instance;
 	static BoundingObjectManager* GetInstance();
 	static void ReleaseInstance();
+	std::vector<MyBoundingObjectClass> objects;
 private:
 	BoundingObjectManager();
 	~BoundingObjectManager();
 	void AddObject(String);
+	void SwitchVisibility(int);
+	int GetNumberObjects();
+	void SetColor(int);
 };
 

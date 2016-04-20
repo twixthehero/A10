@@ -14,6 +14,7 @@ BoundingObjectManager::~BoundingObjectManager()
 void BoundingObjectManager::AddObject(String model)
 {
 	m_pMeshMngr->LoadModel(model, "Model");
+	objects.push_back(MyBoundingObjectClass(m_pMeshMngr->GetVertexList("Model")));
 }
 
 BoundingObjectManager* BoundingObjectManager::GetInstance()
