@@ -11,16 +11,18 @@ void AppClass::InitWindow(String a_sWindowName)
 
 void AppClass::InitVariables(void)
 {
+
 	//Initialize positions
 	m_v3O1 = vector3(-2.5f, 0.0f, 0.0f);
 	m_v3O2 = vector3(2.5f, 0.0f, 0.0f);
 
-	//Load Models
-	m_pMeshMngr->LoadModel("Minecraft\\Steve.obj", "Steve");
-	m_pMeshMngr->LoadModel("Minecraft\\Creeper.obj", "Creeper");
+	BOM = BoundingObjectManager::GetInstance();
 
-	m_pBox1 = new MyBoundingCubeClass(m_pMeshMngr->GetVertexList("Steve"));
-	m_pBox2 = new MyBoundingCubeClass(m_pMeshMngr->GetVertexList("Creeper"));
+	//Load Models
+	BOM->AddObject("Minecraft\\Steve.obj");
+	BOM->AddObject("Minecraft\\Creeper.obj");
+
+	
 }
 
 void AppClass::Update(void)
@@ -41,8 +43,8 @@ void AppClass::Update(void)
 	m_pMeshMngr->SetModelMatrix(glm::translate(m_v3O1) * ToMatrix4(m_qArcBall), "Steve");
 	m_pMeshMngr->SetModelMatrix(glm::translate(m_v3O2), "Creeper");
 
-	m_pBox1->SetModelMatrix(m_pMeshMngr->GetModelMatrix("Steve"));
-	m_pBox2->SetModelMatrix(m_pMeshMngr->GetModelMatrix("Creeper"));
+	BOM->objects[0]->SetModelMatrix(m_pMeshMngr->GetModelMatrix("Steve"));
+	BOM->objects[1]->SetModelMatrix(m_pMeshMngr->GetModelMatrix("Creeper"));
 
 	bool isColliding = m_pBox1->IsColliding(m_pBox2);
 

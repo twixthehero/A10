@@ -19,11 +19,11 @@ public:
 	void Render();
 	void Render(int);
 	void checkColliding();
-	
+	std::vector<MyBoundingObjectClass*> objects;
+
 private:
 	BoundingObjectManager();
 	~BoundingObjectManager();
-	std::vector<MyBoundingObjectClass> objects;
 	bool AABBvisibility;
 };
 
