@@ -1,29 +1,57 @@
-﻿  AppClass.cpp
-  A10_BoundingObjectManager.vcxproj -> D:\Users\mw9448\A10\Z_DELETE\A10_BoundingObjectManagerD.exe
-  A subdirectory or file D:\Users\mw9448\A10\_Binary\ already exists.
-  D:\Users\mw9448\A10\include\GL\bin\glew32.dll
-  D:\Users\mw9448\A10\include\GL\bin\glut32.dll
-  2 File(s) copied
-  D:\Users\mw9448\A10\include\RE\bin\2015\ReEng_VS15.dll
-  D:\Users\mw9448\A10\include\RE\bin\2015\ReEng_VS15_d.dll
-  2 File(s) copied
-  D:\Users\mw9448\A10\include\SFML\bin\sfml-system-2.dll
-  1 File(s) copied
-  D:\Users\mw9448\A10\include\SFML\bin\sfml-window-2.dll
-  1 File(s) copied
-  A subdirectory or file D:\Users\mw9448\A10\_Binary\Shaders\ already exists.
-  D:\Users\mw9448\A10\include\RE\Shaders\Basic.fs
-  D:\Users\mw9448\A10\include\RE\Shaders\Basic.vs
-  D:\Users\mw9448\A10\include\RE\Shaders\BasicColor.fs
-  D:\Users\mw9448\A10\include\RE\Shaders\BasicColor.vs
-  D:\Users\mw9448\A10\include\RE\Shaders\Color.fs
-  D:\Users\mw9448\A10\include\RE\Shaders\Color.vs
-  D:\Users\mw9448\A10\include\RE\Shaders\Phong.fs
-  D:\Users\mw9448\A10\include\RE\Shaders\Phong.vs
-  D:\Users\mw9448\A10\include\RE\Shaders\REShader.fs
-  D:\Users\mw9448\A10\include\RE\Shaders\REShader.vs
-  D:\Users\mw9448\A10\include\RE\Shaders\REShaderInv.fs
-  D:\Users\mw9448\A10\include\RE\Shaders\REShaderMC.fs
-  D:\Users\mw9448\A10\include\RE\Shaders\TextShader.fs
-  D:\Users\mw9448\A10\include\RE\Shaders\TextShader.vs
-  14 File(s) copied
+﻿Build started 4/20/2016 10:17:13 PM.
+     1>Project "C:\Users\Wolfshire\Desktop\A10\A10_BoundingObjectManager\A10_BoundingObjectManager.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\\" /Fd"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt BoundingObjectManager.cpp
+         BoundingObjectManager.cpp
+     1>c:\users\wolfshire\desktop\a10\a10_boundingobjectmanager\boundingobjectmanager.cpp(34): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\wolfshire\desktop\a10\a10_boundingobjectmanager\boundingobjectmanager.cpp(72): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\wolfshire\desktop\a10\a10_boundingobjectmanager\boundingobjectmanager.cpp(73): warning C4018: '<': signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.exe" /INCREMENTAL /NOLOGO ReEng_VS15_d.lib glu32.lib glew32.lib opengl32.lib "sfml-system.lib" "sfml-window.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.lib" /MACHINE:X86 C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\BTO.res
+         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\AppClass.obj
+         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\AppClassControls.obj
+         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\BoundingObjectManager.obj
+         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\Main.obj
+         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\MyBoundingObjectClass.obj
+         A10_BoundingObjectManager.vcxproj -> C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.exe
+       PostBuildEvent:
+         mkdir "C:\Users\Wolfshire\Desktop\A10\_Binary\"
+         xcopy "C:\Users\Wolfshire\Desktop\A10\include\GL\bin" "C:\Users\Wolfshire\Desktop\A10\_Binary" /y
+         xcopy "C:\Users\Wolfshire\Desktop\A10\include\RE\bin\2015" "C:\Users\Wolfshire\Desktop\A10\_Binary" /y
+         xcopy "C:\Users\Wolfshire\Desktop\A10\include\SFML\bin\sfml-system-2.dll" "C:\Users\Wolfshire\Desktop\A10\_Binary" /y
+         xcopy "C:\Users\Wolfshire\Desktop\A10\include\SFML\bin\sfml-window-2.dll" "C:\Users\Wolfshire\Desktop\A10\_Binary" /y
+         mkdir "C:\Users\Wolfshire\Desktop\A10\_Binary\Shaders\"
+         xcopy "C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders" "C:\Users\Wolfshire\Desktop\A10\_Binary\Shaders" /y
+         :VCEnd
+         A subdirectory or file C:\Users\Wolfshire\Desktop\A10\_Binary\ already exists.
+         C:\Users\Wolfshire\Desktop\A10\include\GL\bin\glew32.dll
+         C:\Users\Wolfshire\Desktop\A10\include\GL\bin\glut32.dll
+         2 File(s) copied
+         C:\Users\Wolfshire\Desktop\A10\include\RE\bin\2015\ReEng_VS15.dll
+         C:\Users\Wolfshire\Desktop\A10\include\RE\bin\2015\ReEng_VS15_d.dll
+         2 File(s) copied
+         C:\Users\Wolfshire\Desktop\A10\include\SFML\bin\sfml-system-2.dll
+         1 File(s) copied
+         C:\Users\Wolfshire\Desktop\A10\include\SFML\bin\sfml-window-2.dll
+         1 File(s) copied
+         A subdirectory or file C:\Users\Wolfshire\Desktop\A10\_Binary\Shaders\ already exists.
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Basic.fs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Basic.vs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\BasicColor.fs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\BasicColor.vs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Color.fs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Color.vs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Phong.fs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Phong.vs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\REShader.fs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\REShader.vs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\REShaderInv.fs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\REShaderMC.fs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\TextShader.fs
+         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\TextShader.vs
+         14 File(s) copied
+     1>Done Building Project "C:\Users\Wolfshire\Desktop\A10\A10_BoundingObjectManager\A10_BoundingObjectManager.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.57

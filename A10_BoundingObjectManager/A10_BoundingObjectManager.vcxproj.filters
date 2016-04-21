@@ -21,12 +21,6 @@
     <ClInclude Include="AppClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MyBoundingSphereClass.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyBoundingCubeClass.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BoundingObjectManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -47,12 +41,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MyBoundingSphereClass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MyBoundingCubeClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BoundingObjectManager.cpp">

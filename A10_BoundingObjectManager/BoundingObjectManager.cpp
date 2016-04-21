@@ -2,20 +2,10 @@
 
 BoundingObjectManager* BoundingObjectManager::instance = nullptr;
 
-BoundingObjectManager::BoundingObjectManager()
+void BoundingObjectManager::AddObject(String model, String nick)
 {
-	AABBvisibility = true;
-}
-
-
-BoundingObjectManager::~BoundingObjectManager()
-{
-}
-
-void BoundingObjectManager::AddObject(String model)
-{
-	m_pMeshMngr->LoadModel(model, "Model");
-	objects.push_back(MyBoundingObjectClass(m_pMeshMngr->GetVertexList("Model")));
+	m_pMeshMngr->LoadModel(model, nick);
+	objects.push_back(new MyBoundingObjectClass(m_pMeshMngr->GetVertexList(nick)));
 }
 
 void BoundingObjectManager::SwitchAABBVisibility()
@@ -26,7 +16,7 @@ void BoundingObjectManager::SwitchAABBVisibility()
 
 void BoundingObjectManager::SetVisibility(int index, bool vis)
 {
-	objects[index].SetVisible(vis);
+	objects[index]->SetVisible(vis);
 }
 
 int BoundingObjectManager::GetNumberObjects()
@@ -36,19 +26,28 @@ int BoundingObjectManager::GetNumberObjects()
 
 void BoundingObjectManager::SetColor(int index,vector3 color)
 {
-	objects[index].SetColor(color);
+	objects[index]->SetColor(color);
 }
 
 void BoundingObjectManager::Render()
 {
 	for (int i = 0; i < objects.size(); i++) {
-		objects[i].Draw();
+		objects[i]->Draw();
 	}
 }
 
 void BoundingObjectManager::Render(int index)
 {
-	objects[index].Draw();
+	objects[index]->Draw();
+}
+
+BoundingObjectManager::BoundingObjectManager()
+{
+	m_pMeshMngr = MeshManagerSingleton::GetInstance();
+}
+
+BoundingObjectManager::~BoundingObjectManager()
+{
 }
 
 BoundingObjectManager* BoundingObjectManager::GetInstance()
@@ -69,16 +68,17 @@ void BoundingObjectManager::ReleaseInstance()
 	}
 }
 
-void BoundingObjectManager::checkColliding() {
+void BoundingObjectManager::CheckColliding() {
 	for (int i = 0; i < objects.size(); i++) {
-		for (int k = 0; i < objects.size(); k++) {
-
-			if( (i != k) && (!objects[i].checkCollision(objects[k])) ){
-				objects[i].setColor(REWHITE);
-					objects[k].setColor(REWHITE);}
-			else if (i != k){
-				objects[i].setColor(RERED);
-				objects[k].setColor(RERED);}
+		for (int k = 0; k < objects.size(); k++) {
+			if( (i != k) && (!objects[i]->CheckCollision(objects[k])) ){
+				objects[i]->SetColor(REWHITE);
+				objects[k]->SetColor(REWHITE);
+			}
+			else if (i!=k){
+				objects[i]->SetColor(RERED);
+				objects[k]->SetColor(RERED);
+			}
 		}
 	}
 }

@@ -4,26 +4,27 @@
 #include "MyBoundingObjectClass.h"
 #include <cstring>
 
-class BoundingObjectManager : public ReEngAppClass
+class BoundingObjectManager
 {
 public:
-	typedef ReEngAppClass super;
+	MeshManagerSingleton* m_pMeshMngr;
+
+	BoundingObjectManager();
+	~BoundingObjectManager();
 	static BoundingObjectManager* instance;
 	static BoundingObjectManager* GetInstance();
 	static void ReleaseInstance();
-	void AddObject(String);
+	void AddObject(String,String);
 	void SwitchAABBVisibility();
 	void SetVisibility(int, bool);
 	int GetNumberObjects();
 	void SetColor(int, vector3);
 	void Render();
 	void Render(int);
-	void checkColliding();
+	void CheckColliding();
 	std::vector<MyBoundingObjectClass*> objects;
 
 private:
-	BoundingObjectManager();
-	~BoundingObjectManager();
 	bool AABBvisibility;
 };
 
