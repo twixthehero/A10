@@ -18,21 +18,12 @@ public:
 	void SetColor(int, vector3);
 	void Render();
 	void Render(int);
+	void checkColliding();
 	
 private:
 	BoundingObjectManager();
 	~BoundingObjectManager();
-<<<<<<< HEAD
 	std::vector<MyBoundingObjectClass> objects;
 	bool AABBvisibility;
-=======
-	void AddObject(String);
-	void SwitchVisibility(int);
-	int GetNumberObjects();
-	void SetColor(int);
-	void checkColliding();
-	
-
->>>>>>> 092a56c32d4c22e2097b604451c1fa576c1cd7e4
 };
 
