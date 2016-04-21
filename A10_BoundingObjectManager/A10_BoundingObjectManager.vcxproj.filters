@@ -27,6 +27,12 @@
     <ClInclude Include="MyBoundingCubeClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
+=======
+    <ClInclude Include="BoundingObjectManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+>>>>>>> e72a26c13acbf1c0ed980cd631761d5dc19524c5
     <ClInclude Include="MyBoundingObjectClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -52,6 +58,12 @@
     <ClCompile Include="MyBoundingCubeClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
+=======
+    <ClCompile Include="BoundingObjectManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+>>>>>>> e72a26c13acbf1c0ed980cd631761d5dc19524c5
     <ClCompile Include="MyBoundingObjectClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
