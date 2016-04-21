@@ -1,13 +1,11 @@
-﻿Build started 4/20/2016 10:08:43 PM.
+﻿Build started 4/20/2016 10:17:13 PM.
      1>Project "C:\Users\Wolfshire\Desktop\A10\A10_BoundingObjectManager\A10_BoundingObjectManager.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\\" /Fd"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt AppClass.cpp BoundingObjectManager.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\\" /Fd"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt BoundingObjectManager.cpp
          BoundingObjectManager.cpp
      1>c:\users\wolfshire\desktop\a10\a10_boundingobjectmanager\boundingobjectmanager.cpp(34): warning C4018: '<': signed/unsigned mismatch
      1>c:\users\wolfshire\desktop\a10\a10_boundingobjectmanager\boundingobjectmanager.cpp(72): warning C4018: '<': signed/unsigned mismatch
      1>c:\users\wolfshire\desktop\a10\a10_boundingobjectmanager\boundingobjectmanager.cpp(73): warning C4018: '<': signed/unsigned mismatch
-         AppClass.cpp
-         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.exe" /INCREMENTAL /NOLOGO ReEng_VS15_d.lib glu32.lib glew32.lib opengl32.lib "sfml-system.lib" "sfml-window.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.lib" /MACHINE:X86 C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\BTO.res
          C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\AppClass.obj
@@ -56,4 +54,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.40
+Time Elapsed 00:00:02.57
