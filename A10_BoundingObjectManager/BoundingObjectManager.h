@@ -11,13 +11,18 @@ public:
 	static BoundingObjectManager* instance;
 	static BoundingObjectManager* GetInstance();
 	static void ReleaseInstance();
-	std::vector<MyBoundingObjectClass> objects;
+	void AddObject(String);
+	void SwitchAABBVisibility();
+	void SetVisibility(int, bool);
+	int GetNumberObjects();
+	void SetColor(int, vector3);
+	void Render();
+	void Render(int);
+	
 private:
 	BoundingObjectManager();
 	~BoundingObjectManager();
-	void AddObject(String);
-	void SwitchVisibility(int);
-	int GetNumberObjects();
-	void SetColor(int);
+	std::vector<MyBoundingObjectClass> objects;
+	bool AABBvisibility;
 };
 
