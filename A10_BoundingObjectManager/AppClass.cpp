@@ -16,13 +16,14 @@ void AppClass::InitVariables(void)
 	m_v3O1 = vector3(-2.5f, 0.0f, 0.0f);
 	m_v3O2 = vector3(2.5f, 0.0f, 0.0f);
 
+	//m_pMeshMngr->LoadModel("Minecraft\\Steve.obj", "Steve");
+	//m_pMeshMngr->LoadModel("Minecraft\\Creeper.obj", "Creeper");
+
 	BOM = BoundingObjectManager::GetInstance();
 
 	//Load Models
-	BOM->AddObject("Minecraft\\Steve.obj");
-	BOM->AddObject("Minecraft\\Creeper.obj");
-
-	
+	BOM->AddObject("Minecraft\\Steve.obj", "Steve");
+	BOM->AddObject("Minecraft\\Creeper.obj", "Creeper");
 }
 
 void AppClass::Update(void)
@@ -43,34 +44,11 @@ void AppClass::Update(void)
 	m_pMeshMngr->SetModelMatrix(glm::translate(m_v3O1) * ToMatrix4(m_qArcBall), "Steve");
 	m_pMeshMngr->SetModelMatrix(glm::translate(m_v3O2), "Creeper");
 
-	BOM->objects[0]->SetModelMatrix(m_pMeshMngr->GetModelMatrix("Steve"));
-	BOM->objects[1]->SetModelMatrix(m_pMeshMngr->GetModelMatrix("Creeper"));
+	BOM->objects[0]->GetSetWorld(m_pMeshMngr->GetModelMatrix("Steve"));
+	BOM->objects[1]->GetSetWorld(m_pMeshMngr->GetModelMatrix("Creeper"));
 
-	bool isColliding = m_pBox1->IsColliding(m_pBox2);
-
-	if (isColliding)
-	{
-		m_pMeshMngr->AddCubeToQueue(
-			glm::translate(vector3(m_pBox1->GetCenterG())) *
-			glm::scale(vector3(m_pBox1->GetSize())), RERED, SOLID);
-		m_pMeshMngr->AddCubeToQueue(glm::translate(vector3(m_pBox2->GetCenterG()))  *
-			glm::scale(vector3(m_pBox2->GetSize())), RERED, SOLID);
-        m_pMeshMngr->AddCubeToQueue(
-            glm::translate(vector3(m_pBox1->GetCenterG())) *
-            glm::scale(vector3(m_pBox1->size)), RERED, SOLID);
-	}
-	else
-	{
-		m_pMeshMngr->AddCubeToQueue(
-			glm::translate(vector3(m_pBox1->GetCenterG())) *
-            glm::mat4_cast(glm::quat(m_pBox1->GetModelMatrix())) *
-			glm::scale(vector3(m_pBox1->GetSize())), REGREEN, WIRE);
-		m_pMeshMngr->AddCubeToQueue(glm::translate(vector3(m_pBox2->GetCenterG()))  *
-			glm::scale(vector3(m_pBox2->GetSize())), REGREEN, WIRE);
-        m_pMeshMngr->AddCubeToQueue(
-            glm::translate(vector3(m_pBox1->GetCenterG())) *
-            glm::scale(vector3(m_pBox1->size)), REWHITE, WIRE);
-	}
+	BOM->CheckColliding();
+	BOM->Render();
 	
 	//Adds all loaded instance to the render list
 	m_pMeshMngr->AddInstanceToRenderList("ALL");
@@ -116,18 +94,5 @@ void AppClass::Display(void)
 
 void AppClass::Release(void)
 {
-	if (m_pBox1 != nullptr)
-	{
-		delete m_pBox1;
-		m_pBox1 = nullptr;
-
-	}
-	if (m_pBox2 != nullptr)
-	{
-		delete m_pBox2;
-		m_pBox2 = nullptr;
-
-	}
-
 	super::Release(); //release the memory of the inherited fields
 }
