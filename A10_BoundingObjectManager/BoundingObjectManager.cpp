@@ -34,3 +34,17 @@ void BoundingObjectManager::ReleaseInstance()
 		instance = nullptr;
 	}
 }
+
+void BoundingObjectManager::checkColliding() {
+	for (int i = 0; i < objects.size(); i++) {
+		for (int k = 0; i < objects.size(); k++) {
+
+			if( (i != k) && (!objects[i].checkCollision(objects[k])) ){
+				objects[i].setColor(REWHITE);
+					objects[k].setColor(REWHITE);}
+			else if (i != k){
+				objects[i].setColor(RERED);
+				objects[k].setColor(RERED);}
+		}
+	}
+}

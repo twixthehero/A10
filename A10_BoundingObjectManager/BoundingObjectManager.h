@@ -19,5 +19,8 @@ private:
 	void SwitchVisibility(int);
 	int GetNumberObjects();
 	void SetColor(int);
+	void checkColliding();
+	
+
 };
 
