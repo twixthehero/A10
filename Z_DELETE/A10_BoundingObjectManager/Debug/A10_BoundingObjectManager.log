@@ -1,57 +1,617 @@
-﻿Build started 4/20/2016 10:17:13 PM.
-     1>Project "C:\Users\Wolfshire\Desktop\A10\A10_BoundingObjectManager\A10_BoundingObjectManager.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\\" /Fd"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt BoundingObjectManager.cpp
-         BoundingObjectManager.cpp
-     1>c:\users\wolfshire\desktop\a10\a10_boundingobjectmanager\boundingobjectmanager.cpp(34): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\wolfshire\desktop\a10\a10_boundingobjectmanager\boundingobjectmanager.cpp(72): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\wolfshire\desktop\a10\a10_boundingobjectmanager\boundingobjectmanager.cpp(73): warning C4018: '<': signed/unsigned mismatch
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.exe" /INCREMENTAL /NOLOGO ReEng_VS15_d.lib glu32.lib glew32.lib opengl32.lib "sfml-system.lib" "sfml-window.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.lib" /MACHINE:X86 C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\BTO.res
-         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\AppClass.obj
-         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\AppClassControls.obj
-         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\BoundingObjectManager.obj
-         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\Main.obj
-         C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManager\Debug\MyBoundingObjectClass.obj
-         A10_BoundingObjectManager.vcxproj -> C:\Users\Wolfshire\Desktop\A10\Z_DELETE\A10_BoundingObjectManagerD.exe
-       PostBuildEvent:
-         mkdir "C:\Users\Wolfshire\Desktop\A10\_Binary\"
-         xcopy "C:\Users\Wolfshire\Desktop\A10\include\GL\bin" "C:\Users\Wolfshire\Desktop\A10\_Binary" /y
-         xcopy "C:\Users\Wolfshire\Desktop\A10\include\RE\bin\2015" "C:\Users\Wolfshire\Desktop\A10\_Binary" /y
-         xcopy "C:\Users\Wolfshire\Desktop\A10\include\SFML\bin\sfml-system-2.dll" "C:\Users\Wolfshire\Desktop\A10\_Binary" /y
-         xcopy "C:\Users\Wolfshire\Desktop\A10\include\SFML\bin\sfml-window-2.dll" "C:\Users\Wolfshire\Desktop\A10\_Binary" /y
-         mkdir "C:\Users\Wolfshire\Desktop\A10\_Binary\Shaders\"
-         xcopy "C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders" "C:\Users\Wolfshire\Desktop\A10\_Binary\Shaders" /y
-         :VCEnd
-         A subdirectory or file C:\Users\Wolfshire\Desktop\A10\_Binary\ already exists.
-         C:\Users\Wolfshire\Desktop\A10\include\GL\bin\glew32.dll
-         C:\Users\Wolfshire\Desktop\A10\include\GL\bin\glut32.dll
-         2 File(s) copied
-         C:\Users\Wolfshire\Desktop\A10\include\RE\bin\2015\ReEng_VS15.dll
-         C:\Users\Wolfshire\Desktop\A10\include\RE\bin\2015\ReEng_VS15_d.dll
-         2 File(s) copied
-         C:\Users\Wolfshire\Desktop\A10\include\SFML\bin\sfml-system-2.dll
-         1 File(s) copied
-         C:\Users\Wolfshire\Desktop\A10\include\SFML\bin\sfml-window-2.dll
-         1 File(s) copied
-         A subdirectory or file C:\Users\Wolfshire\Desktop\A10\_Binary\Shaders\ already exists.
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Basic.fs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Basic.vs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\BasicColor.fs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\BasicColor.vs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Color.fs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Color.vs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Phong.fs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\Phong.vs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\REShader.fs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\REShader.vs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\REShaderInv.fs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\REShaderMC.fs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\TextShader.fs
-         C:\Users\Wolfshire\Desktop\A10\include\RE\Shaders\TextShader.vs
-         14 File(s) copied
-     1>Done Building Project "C:\Users\Wolfshire\Desktop\A10\A10_BoundingObjectManager\A10_BoundingObjectManager.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:02.57
+﻿  MyBoundingObjectClass.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::FileReaderClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::FileReaderClass,
+              _Alloc=std::allocator<ReEng::FileReaderClass>
+          ]
+          and
+          [
+              _Ty=ReEng::FileReaderClass
+          ]
+          and
+          [
+              _Ty=ReEng::FileReaderClass,
+              _Alloc=std::allocator<ReEng::FileReaderClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\system\filereaderclass.h(351): note: see reference to class template instantiation 'std::vector<ReEng::FileReaderClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::FileReaderClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::FileReaderClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::FileReaderClass *,
+              _Alloc=std::allocator<ReEng::FileReaderClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::FileReaderClass *
+          ]
+          and
+          [
+              _Ty=ReEng::FileReaderClass *,
+              _Alloc=std::allocator<ReEng::FileReaderClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\system\filereaderclass.h(352): note: see reference to class template instantiation 'std::vector<ReEng::FileReaderClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::FileReaderClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::ShaderClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::ShaderClass,
+              _Alloc=std::allocator<ReEng::ShaderClass>
+          ]
+          and
+          [
+              _Ty=ReEng::ShaderClass
+          ]
+          and
+          [
+              _Ty=ReEng::ShaderClass,
+              _Alloc=std::allocator<ReEng::ShaderClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\system\shaderclass.h(122): note: see reference to class template instantiation 'std::vector<ReEng::ShaderClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::ShaderClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::ShaderClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::ShaderClass *,
+              _Alloc=std::allocator<ReEng::ShaderClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::ShaderClass *
+          ]
+          and
+          [
+              _Ty=ReEng::ShaderClass *,
+              _Alloc=std::allocator<ReEng::ShaderClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\system\shaderclass.h(123): note: see reference to class template instantiation 'std::vector<ReEng::ShaderClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::ShaderClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::LightClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::LightClass,
+              _Alloc=std::allocator<ReEng::LightClass>
+          ]
+          and
+          [
+              _Ty=ReEng::LightClass
+          ]
+          and
+          [
+              _Ty=ReEng::LightClass,
+              _Alloc=std::allocator<ReEng::LightClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\light\lightclass.h(135): note: see reference to class template instantiation 'std::vector<ReEng::LightClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::LightClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::LightClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::LightClass *,
+              _Alloc=std::allocator<ReEng::LightClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::LightClass *
+          ]
+          and
+          [
+              _Ty=ReEng::LightClass *,
+              _Alloc=std::allocator<ReEng::LightClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\light\lightclass.h(136): note: see reference to class template instantiation 'std::vector<ReEng::LightClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::LightClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::TextureClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::TextureClass,
+              _Alloc=std::allocator<ReEng::TextureClass>
+          ]
+          and
+          [
+              _Ty=ReEng::TextureClass
+          ]
+          and
+          [
+              _Ty=ReEng::TextureClass,
+              _Alloc=std::allocator<ReEng::TextureClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\materials\textureclass.h(93): note: see reference to class template instantiation 'std::vector<ReEng::TextureClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::TextureClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::TextureClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::TextureClass *,
+              _Alloc=std::allocator<ReEng::TextureClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::TextureClass *
+          ]
+          and
+          [
+              _Ty=ReEng::TextureClass *,
+              _Alloc=std::allocator<ReEng::TextureClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\materials\textureclass.h(94): note: see reference to class template instantiation 'std::vector<ReEng::TextureClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::TextureClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::FrameClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::FrameClass,
+              _Alloc=std::allocator<ReEng::FrameClass>
+          ]
+          and
+          [
+              _Ty=ReEng::FrameClass
+          ]
+          and
+          [
+              _Ty=ReEng::FrameClass,
+              _Alloc=std::allocator<ReEng::FrameClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\animation\frameclass.h(262): note: see reference to class template instantiation 'std::vector<ReEng::FrameClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::FrameClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::FrameClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::FrameClass *,
+              _Alloc=std::allocator<ReEng::FrameClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::FrameClass *
+          ]
+          and
+          [
+              _Ty=ReEng::FrameClass *,
+              _Alloc=std::allocator<ReEng::FrameClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\animation\frameclass.h(263): note: see reference to class template instantiation 'std::vector<ReEng::FrameClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::FrameClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::AnimationClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::AnimationClass,
+              _Alloc=std::allocator<ReEng::AnimationClass>
+          ]
+          and
+          [
+              _Ty=ReEng::AnimationClass
+          ]
+          and
+          [
+              _Ty=ReEng::AnimationClass,
+              _Alloc=std::allocator<ReEng::AnimationClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\animation\animationclass.h(97): note: see reference to class template instantiation 'std::vector<ReEng::AnimationClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::AnimationClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::AnimationClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::AnimationClass *,
+              _Alloc=std::allocator<ReEng::AnimationClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::AnimationClass *
+          ]
+          and
+          [
+              _Ty=ReEng::AnimationClass *,
+              _Alloc=std::allocator<ReEng::AnimationClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\animation\animationclass.h(98): note: see reference to class template instantiation 'std::vector<ReEng::AnimationClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::AnimationClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::SequenceClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::SequenceClass,
+              _Alloc=std::allocator<ReEng::SequenceClass>
+          ]
+          and
+          [
+              _Ty=ReEng::SequenceClass
+          ]
+          and
+          [
+              _Ty=ReEng::SequenceClass,
+              _Alloc=std::allocator<ReEng::SequenceClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\animation\sequenceclass.h(189): note: see reference to class template instantiation 'std::vector<ReEng::SequenceClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::SequenceClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::SequenceClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::SequenceClass *,
+              _Alloc=std::allocator<ReEng::SequenceClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::SequenceClass *
+          ]
+          and
+          [
+              _Ty=ReEng::SequenceClass *,
+              _Alloc=std::allocator<ReEng::SequenceClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\animation\sequenceclass.h(190): note: see reference to class template instantiation 'std::vector<ReEng::SequenceClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::SequenceClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::StateClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::StateClass,
+              _Alloc=std::allocator<ReEng::StateClass>
+          ]
+          and
+          [
+              _Ty=ReEng::StateClass
+          ]
+          and
+          [
+              _Ty=ReEng::StateClass,
+              _Alloc=std::allocator<ReEng::StateClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\animation\stateclass.h(179): note: see reference to class template instantiation 'std::vector<ReEng::StateClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::StateClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::MeshClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::MeshClass,
+              _Alloc=std::allocator<ReEng::MeshClass>
+          ]
+          and
+          [
+              _Ty=ReEng::MeshClass
+          ]
+          and
+          [
+              _Ty=ReEng::MeshClass,
+              _Alloc=std::allocator<ReEng::MeshClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\meshclass.h(433): note: see reference to class template instantiation 'std::vector<ReEng::MeshClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::MeshClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::MeshClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::MeshClass *,
+              _Alloc=std::allocator<ReEng::MeshClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::MeshClass *
+          ]
+          and
+          [
+              _Ty=ReEng::MeshClass *,
+              _Alloc=std::allocator<ReEng::MeshClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\meshclass.h(434): note: see reference to class template instantiation 'std::vector<ReEng::MeshClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::MeshClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::CameraClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::CameraClass,
+              _Alloc=std::allocator<ReEng::CameraClass>
+          ]
+          and
+          [
+              _Ty=ReEng::CameraClass
+          ]
+          and
+          [
+              _Ty=ReEng::CameraClass,
+              _Alloc=std::allocator<ReEng::CameraClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\camera\cameraclass.h(256): note: see reference to class template instantiation 'std::vector<ReEng::CameraClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::CameraClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::CameraClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::CameraClass *,
+              _Alloc=std::allocator<ReEng::CameraClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::CameraClass *
+          ]
+          and
+          [
+              _Ty=ReEng::CameraClass *,
+              _Alloc=std::allocator<ReEng::CameraClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\camera\cameraclass.h(257): note: see reference to class template instantiation 'std::vector<ReEng::CameraClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::CameraClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::PrimitiveClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::PrimitiveClass,
+              _Alloc=std::allocator<ReEng::PrimitiveClass>
+          ]
+          and
+          [
+              _Ty=ReEng::PrimitiveClass
+          ]
+          and
+          [
+              _Ty=ReEng::PrimitiveClass,
+              _Alloc=std::allocator<ReEng::PrimitiveClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\primitiveclass.h(122): note: see reference to class template instantiation 'std::vector<ReEng::PrimitiveClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::PrimitiveClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::PrimitiveClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::PrimitiveClass *,
+              _Alloc=std::allocator<ReEng::PrimitiveClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::PrimitiveClass *
+          ]
+          and
+          [
+              _Ty=ReEng::PrimitiveClass *,
+              _Alloc=std::allocator<ReEng::PrimitiveClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\primitiveclass.h(123): note: see reference to class template instantiation 'std::vector<ReEng::PrimitiveClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::PrimitiveClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::PrimitiveWireClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::PrimitiveWireClass,
+              _Alloc=std::allocator<ReEng::PrimitiveWireClass>
+          ]
+          and
+          [
+              _Ty=ReEng::PrimitiveWireClass
+          ]
+          and
+          [
+              _Ty=ReEng::PrimitiveWireClass,
+              _Alloc=std::allocator<ReEng::PrimitiveWireClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\primitivewireclass.h(143): note: see reference to class template instantiation 'std::vector<ReEng::PrimitiveWireClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::PrimitiveWireClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::PrimitiveWireClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::PrimitiveWireClass *,
+              _Alloc=std::allocator<ReEng::PrimitiveWireClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::PrimitiveWireClass *
+          ]
+          and
+          [
+              _Ty=ReEng::PrimitiveWireClass *,
+              _Alloc=std::allocator<ReEng::PrimitiveWireClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\primitivewireclass.h(144): note: see reference to class template instantiation 'std::vector<ReEng::PrimitiveWireClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::PrimitiveWireClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::GroupClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::GroupClass,
+              _Alloc=std::allocator<ReEng::GroupClass>
+          ]
+          and
+          [
+              _Ty=ReEng::GroupClass
+          ]
+          and
+          [
+              _Ty=ReEng::GroupClass,
+              _Alloc=std::allocator<ReEng::GroupClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\groupclass.h(510): note: see reference to class template instantiation 'std::vector<ReEng::GroupClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::GroupClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::GroupClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::GroupClass *,
+              _Alloc=std::allocator<ReEng::GroupClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::GroupClass *
+          ]
+          and
+          [
+              _Ty=ReEng::GroupClass *,
+              _Alloc=std::allocator<ReEng::GroupClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\groupclass.h(511): note: see reference to class template instantiation 'std::vector<ReEng::GroupClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::GroupClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::ModelClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::ModelClass,
+              _Alloc=std::allocator<ReEng::ModelClass>
+          ]
+          and
+          [
+              _Ty=ReEng::ModelClass
+          ]
+          and
+          [
+              _Ty=ReEng::ModelClass,
+              _Alloc=std::allocator<ReEng::ModelClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\modelclass.h(493): note: see reference to class template instantiation 'std::vector<ReEng::ModelClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::ModelClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::ModelClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::ModelClass *,
+              _Alloc=std::allocator<ReEng::ModelClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::ModelClass *
+          ]
+          and
+          [
+              _Ty=ReEng::ModelClass *,
+              _Alloc=std::allocator<ReEng::ModelClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\modelclass.h(494): note: see reference to class template instantiation 'std::vector<ReEng::ModelClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::ModelClass *
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::InstanceClass>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::InstanceClass,
+              _Alloc=std::allocator<ReEng::InstanceClass>
+          ]
+          and
+          [
+              _Ty=ReEng::InstanceClass
+          ]
+          and
+          [
+              _Ty=ReEng::InstanceClass,
+              _Alloc=std::allocator<ReEng::InstanceClass>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\instanceclass.h(362): note: see reference to class template instantiation 'std::vector<ReEng::InstanceClass,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::InstanceClass
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<ReEng::InstanceClass *>>,true>' needs to have dll-interface to be used by clients of class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=ReEng::InstanceClass *,
+              _Alloc=std::allocator<ReEng::InstanceClass *>
+          ]
+          and
+          [
+              _Ty=ReEng::InstanceClass *
+          ]
+          and
+          [
+              _Ty=ReEng::InstanceClass *,
+              _Alloc=std::allocator<ReEng::InstanceClass *>
+          ]
+  \\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\include\re\mesh\instanceclass.h(363): note: see reference to class template instantiation 'std::vector<ReEng::InstanceClass *,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=ReEng::InstanceClass *
+          ]
+  Main.cpp
+  BoundingObjectManager.cpp
+\\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\a10_boundingobjectmanager\boundingobjectmanager.cpp(34): warning C4018: '<': signed/unsigned mismatch
+\\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\a10_boundingobjectmanager\boundingobjectmanager.cpp(72): warning C4018: '<': signed/unsigned mismatch
+\\banner.main.ad.rit.edu\students\hxz3509\igmprofile\desktop\a11_\a10_boundingobjectmanager\boundingobjectmanager.cpp(73): warning C4018: '<': signed/unsigned mismatch
+  AppClassControls.cpp
+  AppClass.cpp
+  Generating Code...
+  A10_BoundingObjectManager.vcxproj -> \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\Z_DELETE\A10_BoundingObjectManagerD.exe
+  A subdirectory or file \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\_Binary\ already exists.
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\GL\bin\glew32.dll
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\GL\bin\glut32.dll
+  2 File(s) copied
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\bin\2015\ReEng_VS15.dll
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\bin\2015\ReEng_VS15_d.dll
+  2 File(s) copied
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\SFML\bin\sfml-system-2.dll
+  1 File(s) copied
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\SFML\bin\sfml-window-2.dll
+  1 File(s) copied
+  A subdirectory or file \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\_Binary\Shaders\ already exists.
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\Basic.fs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\Basic.vs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\BasicColor.fs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\BasicColor.vs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\Color.fs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\Color.vs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\Phong.fs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\Phong.vs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\REShader.fs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\REShader.vs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\REShaderInv.fs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\REShaderMC.fs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\TextShader.fs
+  \\banner.main.ad.rit.edu\students\hxz3509\IGMProfile\Desktop\a11_\include\RE\Shaders\TextShader.vs
+  14 File(s) copied
