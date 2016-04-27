@@ -69,15 +69,27 @@ void BoundingObjectManager::ReleaseInstance()
 }
 
 void BoundingObjectManager::CheckColliding() {
-	for (int i = 0; i < objects.size(); i++) {
-		for (int k = 0; k < objects.size(); k++) {
-			if( (i != k) && (!objects[i]->CheckCollision(objects[k])) ){
+	for (int i = 0; i < objects.size() - 1; i++) {
+		for (int k = 1; k < objects.size(); k++) {
+			if(objects[i]->CheckCollision(objects[k]) == 0){
+				objects[i]->SetColor(RERED);
+				objects[k]->SetColor(RERED);
+			}
+			else if (objects[i]->CheckCollision(objects[k]) >= 4) {
+				m_pMeshMngr->AddPlaneToQueue(objects[k]->worldMatrix, REBLUE);
 				objects[i]->SetColor(REWHITE);
 				objects[k]->SetColor(REWHITE);
 			}
-			else if (i!=k){
-				objects[i]->SetColor(RERED);
-				objects[k]->SetColor(RERED);
+			else if (objects[i]->CheckCollision(objects[k]) >= 2) {
+				m_pMeshMngr->AddPlaneToQueue(objects[k]->worldMatrix, REGREEN);
+				objects[i]->SetColor(REWHITE);
+				objects[k]->SetColor(REWHITE);
+			}
+			else{
+				m_pMeshMngr->AddPlaneToQueue(objects[k]->worldMatrix, RERED);
+				objects[i]->SetColor(REWHITE);
+				objects[k]->SetColor(REWHITE);
+				
 			}
 		}
 	}

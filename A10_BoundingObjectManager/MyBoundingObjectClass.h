@@ -9,6 +9,7 @@ class MyBoundingObjectClass
 {
 public:
 	MeshManagerSingleton* m_pMeshMngr;
+	PrimitiveClass* plane;
 
     MyBoundingObjectClass(std::vector<vector3>);
     ~MyBoundingObjectClass();
@@ -18,10 +19,11 @@ public:
     vector3 GetMin();
     vector3 GetMax();
 
+	matrix4 worldMatrix;
 	matrix4 GetSetWorld(matrix4);
 	void SetColor(vector3);
 	void Draw();
-	bool CheckCollision(MyBoundingObjectClass* const a_pOther);
+	int CheckCollision(MyBoundingObjectClass* const a_pOther);
 private:
     std::vector<vector3> points;
     bool visible;
@@ -29,7 +31,7 @@ private:
     vector3 center;
     vector3 min;
     vector3 max;
-	matrix4 worldMatrix;
+	
 	vector3 color;
 	vector3 size;
 

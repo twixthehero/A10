@@ -133,37 +133,28 @@ void MyBoundingObjectClass::Draw()
 		glm::scale(size), color, WIRE);
 }
 
-bool MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
+int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 {
-	bool bAreColliding = true;
+	
 	vector3 vMin1 = min;
 	vector3 vMax1 = max;
 	vector3 vMin2 = a_pOther->min;
 	vector3 vMax2 = a_pOther->max;
+	int collide = 0;
 
 	//Check for X
-<<<<<<< HEAD
-	if (vMax1.x < vMin2.x)
-		bAreColliding = false;
-	if (vMin1.x > vMax2.x)
-		bAreColliding = false;
-=======
     if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
         collide += 1;
-        bAreColliding = false;
->>>>>>> 126f8cfb3fbf7ac741ade8976a604379b055c76b
+        
 
 	//Check for Y
-	if (vMax1.y < vMin2.y)
-		bAreColliding = false;
-	if (vMin1.y > vMax2.y)
-		bAreColliding = false;
+	if (vMax1.y < vMin2.y || vMin1.y > vMax2.y)
+		collide += 2 ;
+	
 
 	//Check for Z
-	if (vMax1.z < vMin2.z)
-		bAreColliding = false;
-	if (vMin1.z > vMax2.z)
-		bAreColliding = false;
+	if (vMax1.z < vMin2.z || vMin1.z > vMax2.z)
+		collide += 4;
 
-	return bAreColliding;
+	return collide;
 }

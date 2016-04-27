@@ -57,6 +57,12 @@ void AppClass::ProcessKeyboard(void)
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		m_v3O1.y += 0.1f;
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::X))
+		m_v3O1.z += 0.1f;
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
+		m_v3O1.z -= 0.1f;
 #pragma endregion
 
 #pragma region Other Actions
