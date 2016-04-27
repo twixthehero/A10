@@ -142,10 +142,16 @@ bool MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther
 	vector3 vMax2 = a_pOther->max;
 
 	//Check for X
+<<<<<<< HEAD
 	if (vMax1.x < vMin2.x)
 		bAreColliding = false;
 	if (vMin1.x > vMax2.x)
 		bAreColliding = false;
+=======
+    if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
+        collide += 1;
+        bAreColliding = false;
+>>>>>>> 126f8cfb3fbf7ac741ade8976a604379b055c76b
 
 	//Check for Y
 	if (vMax1.y < vMin2.y)
