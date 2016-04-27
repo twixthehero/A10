@@ -21,7 +21,7 @@ public:
 	matrix4 GetSetWorld(matrix4);
 	void SetColor(vector3);
 	void Draw();
-	bool CheckCollision(MyBoundingObjectClass* const a_pOther);
+	int CheckCollision(MyBoundingObjectClass* const a_pOther);
 private:
     std::vector<vector3> points;
     bool visible;
