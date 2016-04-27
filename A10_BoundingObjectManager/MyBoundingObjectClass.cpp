@@ -144,7 +144,7 @@ int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 
 	//Check for X
     if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
-        //collide += 1;
+        collide += 1;
         bAreColliding = false;
 
 	//Check for Y
