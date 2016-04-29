@@ -25,7 +25,7 @@ public:
 	void Draw();
 	int CheckCollision(MyBoundingObjectClass* const a_pOther);
 
-	std::vector<vector3> CalcPoints(vector3 min, vector3 max);
+	std::vector<vector3> CalcPoints();
 private:
     std::vector<vector3> points;
     bool visible;

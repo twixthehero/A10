@@ -135,7 +135,6 @@ void MyBoundingObjectClass::Draw()
 
 int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 {
-	
 	vector3 vMin1 = min;
 	vector3 vMax1 = max;
 	vector3 vMin2 = a_pOther->min;
@@ -145,38 +144,102 @@ int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 	//Check for X
     if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
         collide += 1;
-        
 
 	//Check for Y
 	if (vMax1.y < vMin2.y || vMin1.y > vMax2.y)
-		collide += 2 ;
-	
+		collide += 2;
 
 	//Check for Z
 	if (vMax1.z < vMin2.z || vMin1.z > vMax2.z)
 		collide += 4;
 
+    //if arbb collides
+    if (collide == 0)
+    {
+        //sat
+        std::vector<vector3> normals = std::vector<vector3>();
+        std::vector<vector3> corners = CalcPoints();
+        std::vector<vector3> corners2 = a_pOther->CalcPoints();
+
+        //calc normals with no duplicates b1
+        for (int i = 1; i <= corners.size(); i++)
+        {
+            vector3 n = corners[i % corners.size()] - corners[i - 1];
+            float tmp = n.x;
+            n.x = n.y;
+            n.y = -tmp;
+            bool add = true;
+
+            for (int k = 0; k < normals.size(); k++)
+            {
+                if (normals[k] == n || normals[k] == -n)
+                {
+                    add = false;
+                    break;
+                }
+            }
+
+            if (add)
+            {
+                normals.push_back(n);
+            }
+        }
+
+        //calc normals with no duplicates b2
+        for (int i = 1; i <= corners2.size(); i++)
+        {
+            vector3 n = corners2[i % corners2.size()] - corners2[i - 1];
+            float tmp = n.x;
+            n.x = n.y;
+            n.y = -tmp;
+            bool add = true;
+
+            for (int k = 0; k < normals.size(); k++)
+            {
+                if (normals[k] == n || normals[k] == -n)
+                {
+                    add = false;
+                    break;
+                }
+            }
+
+            if (add)
+            {
+                normals.push_back(n);
+            }
+        }
+
+        //for each normal, proj each other normal and see if touching
+        for (int i = 0; i < normals.size(); i++)
+        {
+            if (Intersection(corners, corners2, normals[i]))
+            {
+                return 0;
+            }
+        }
+    }
+
 	return collide;
 }
 
-std::vector<vector3> MyBoundingObjectClass::CalcPoints(vector3 min, vector3 max)
+std::vector<vector3> MyBoundingObjectClass::CalcPoints()
 {
 	std::vector<vector3> pts;
-	//111
-	pts.push_back(max);
 	//000
 	pts.push_back(min);
 	//001
 	pts.push_back(vector3(min.x, min.y, max.z));
-	//010
-	pts.push_back(vector3(min.x, max.y, min.z));
-	//100
-	pts.push_back(vector3(max.x, min.y, min.z));
-	//101
-	pts.push_back(vector3(max.x, min.y, max.z));
+    //101
+    pts.push_back(vector3(max.x, min.y, max.z));
+    //100
+    pts.push_back(vector3(max.x, min.y, min.z));
 	//110
 	pts.push_back(vector3(max.x, max.y, min.z));
+    //111
+    pts.push_back(max);
 	//011
 	pts.push_back(vector3(min.x, max.y, max.z));
+    //010
+    pts.push_back(vector3(min.x, max.y, min.z));
 	return pts;
 }
