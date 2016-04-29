@@ -1,5 +1,6 @@
 #include "MyBoundingObjectClass.h"
 #include "limits"
+
 MyBoundingObjectClass::MyBoundingObjectClass(std::vector<vector3> pts)
 {
 	m_pMeshMngr = MeshManagerSingleton::GetInstance();
@@ -133,30 +134,28 @@ void MyBoundingObjectClass::Draw()
 		glm::scale(size), color, WIRE);
 }
 
-int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
+bool MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 {
 	vector3 vMin1 = min;
 	vector3 vMax1 = max;
 	vector3 vMin2 = a_pOther->min;
 	vector3 vMax2 = a_pOther->max;
-	int collide = 0;
+    bool collide = true;
 
 	//Check for X
-    /*if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
-        collide += 1;
+    if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
+        collide = false;
 
 	//Check for Y
 	if (vMax1.y < vMin2.y || vMin1.y > vMax2.y)
-		collide += 2;
+		collide = false;
 
 	//Check for Z
 	if (vMax1.z < vMin2.z || vMin1.z > vMax2.z)
-		collide += 4;*/
-
-
+		collide = false;
 
     //if arbb collides
-    if (collide == 0)
+    if (collide)
     {
         //sat
         std::vector<vector3> normals = std::vector<vector3>();
@@ -216,7 +215,8 @@ int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
         {
             if (Intersection(corners, corners2, normals[i]))
             {
-                return 0;
+                collide = true;
+                break;
             }
         }
     }
@@ -246,7 +246,7 @@ std::vector<vector3> MyBoundingObjectClass::CalcPoints()
 	return pts;
 }
 
-bool Intersection(std::vector<vector3> aPoints, std::vector<vector3> bPoints, vector3 axis)
+bool MyBoundingObjectClass::Intersection(std::vector<vector3> aPoints, std::vector<vector3> bPoints, vector3 axis)
 {
     //checks for cross product of (0,0,0)
     if (axis == vector3(0, 0, 0))

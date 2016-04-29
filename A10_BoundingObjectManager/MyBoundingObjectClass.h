@@ -23,7 +23,7 @@ public:
 	matrix4 GetSetWorld(matrix4);
 	void SetColor(vector3);
 	void Draw();
-	int CheckCollision(MyBoundingObjectClass* const a_pOther);
+	bool CheckCollision(MyBoundingObjectClass* const a_pOther);
 	std::vector<vector3> CalcPoints();
     bool Intersection(std::vector<vector3>, std::vector<vector3>, vector3);
 private:
