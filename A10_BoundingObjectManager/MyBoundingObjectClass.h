@@ -24,6 +24,7 @@ public:
 	void SetColor(vector3);
 	void Draw();
 	int CheckCollision(MyBoundingObjectClass* const a_pOther);
+    bool Intersection(vector3[], vector3[], vector3);
 private:
     std::vector<vector3> points;
     bool visible;

@@ -143,7 +143,7 @@ int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 	int collide = 0;
 
 	//Check for X
-    if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
+    /*if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
         collide += 1;
         
 
@@ -154,7 +154,38 @@ int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 
 	//Check for Z
 	if (vMax1.z < vMin2.z || vMin1.z > vMax2.z)
-		collide += 4;
+		collide += 4;*/
+
+
 
 	return collide;
+}
+
+bool Intersection(vector3 aPoints[], vector3 bPoints[], vector3 axis)
+{
+    if (axis == vector3(0, 0, 0))
+    {
+        return true;
+    }
+
+    float aMin;
+    float aMax;
+    float bMin;
+    float bMax;
+
+    for (int i = 0; i < 8; i++)
+    {
+        float aDistance = glm::dot(aPoints[i], axis);
+        aMin = (aDistance < aMin) ? aDistance : aMin;
+        aMax = (aDistance > aMax) ? aDistance : aMax;
+
+        float bDistance = glm::dot(bPoints[i], axis);
+        bMin = (bDistance < bMin) ? bDistance : bMin;
+        bMax = (bDistance > bMax) ? bDistance : bMax;
+    }
+
+    float longDis = glm::max(aMax, bMax) - glm::min(aMin, bMin);
+    float sumDis = aMax - aMin + bMax - bMin;
+
+    return longDis < sumDis;
 }
