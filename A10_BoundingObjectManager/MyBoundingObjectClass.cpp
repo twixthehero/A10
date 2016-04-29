@@ -220,8 +220,8 @@ bool MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther
             }
         }
     }
-
-	return collide;
+	
+    return collide;
 }
 
 std::vector<vector3> MyBoundingObjectClass::CalcPoints()
