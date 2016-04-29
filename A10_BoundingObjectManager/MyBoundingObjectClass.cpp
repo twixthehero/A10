@@ -133,16 +133,17 @@ void MyBoundingObjectClass::Draw()
 		glm::scale(size), color, WIRE);
 }
 
-int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
+bool MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 {
 	vector3 vMin1 = min;
 	vector3 vMax1 = max;
 	vector3 vMin2 = a_pOther->min;
 	vector3 vMax2 = a_pOther->max;
 	int collide = 0;
+	bool collisionBool;
 
 	//Check for X
-    /*if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
+    if (vMax1.x < vMin2.x || vMin1.x > vMax2.x)
         collide += 1;
 
 	//Check for Y
@@ -151,7 +152,7 @@ int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 
 	//Check for Z
 	if (vMax1.z < vMin2.z || vMin1.z > vMax2.z)
-		collide += 4;*/
+		collide += 4;
 
 
 
@@ -220,8 +221,9 @@ int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
             }
         }
     }
-
-	return collide;
+	if (collide == 0) { collisionBool = true; }
+	else { collisionBool = false; }
+	return collisionBool;
 }
 
 std::vector<vector3> MyBoundingObjectClass::CalcPoints()
