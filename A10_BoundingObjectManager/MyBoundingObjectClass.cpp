@@ -1,5 +1,5 @@
 #include "MyBoundingObjectClass.h"
-
+#include "limits"
 MyBoundingObjectClass::MyBoundingObjectClass(std::vector<vector3> pts)
 {
 	m_pMeshMngr = MeshManagerSingleton::GetInstance();
@@ -163,16 +163,19 @@ int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 
 bool Intersection(vector3 aPoints[], vector3 bPoints[], vector3 axis)
 {
+    //checks for cross product of (0,0,0)
     if (axis == vector3(0, 0, 0))
     {
         return true;
     }
 
-    float aMin;
-    float aMax;
-    float bMin;
-    float bMax;
+    //sets some Min and Max
+    float aMin = std::numeric_limits<float>::max();
+    float aMax = -std::numeric_limits<float>::max();
+    float bMin = std::numeric_limits<float>::max();
+    float bMax = -std::numeric_limits<float>::max();
 
+    //calculate min and max
     for (int i = 0; i < 8; i++)
     {
         float aDistance = glm::dot(aPoints[i], axis);
@@ -184,8 +187,10 @@ bool Intersection(vector3 aPoints[], vector3 bPoints[], vector3 axis)
         bMax = (bDistance > bMax) ? bDistance : bMax;
     }
 
+    //check intersection
     float longDis = glm::max(aMax, bMax) - glm::min(aMin, bMin);
     float sumDis = aMax - aMin + bMax - bMin;
 
+    //return true/false
     return longDis < sumDis;
 }
