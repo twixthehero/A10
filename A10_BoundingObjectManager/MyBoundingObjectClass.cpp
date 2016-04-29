@@ -158,3 +158,25 @@ int MyBoundingObjectClass::CheckCollision(MyBoundingObjectClass* const a_pOther)
 
 	return collide;
 }
+
+std::vector<vector3> MyBoundingObjectClass::CalcPoints(vector3 min, vector3 max)
+{
+	std::vector<vector3> pts;
+	//111
+	pts.push_back(max);
+	//000
+	pts.push_back(min);
+	//001
+	pts.push_back(vector3(min.x, min.y, max.z));
+	//010
+	pts.push_back(vector3(min.x, max.y, min.z));
+	//100
+	pts.push_back(vector3(max.x, min.y, min.z));
+	//101
+	pts.push_back(vector3(max.x, min.y, max.z));
+	//110
+	pts.push_back(vector3(max.x, max.y, min.z));
+	//011
+	pts.push_back(vector3(min.x, max.y, max.z));
+	return pts;
+}

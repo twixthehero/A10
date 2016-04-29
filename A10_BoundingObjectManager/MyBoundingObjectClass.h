@@ -24,6 +24,8 @@ public:
 	void SetColor(vector3);
 	void Draw();
 	int CheckCollision(MyBoundingObjectClass* const a_pOther);
+
+	std::vector<vector3> CalcPoints(vector3 min, vector3 max);
 private:
     std::vector<vector3> points;
     bool visible;
@@ -34,6 +36,5 @@ private:
 	
 	vector3 color;
 	vector3 size;
-
 };
 
